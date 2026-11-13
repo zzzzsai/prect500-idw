@@ -76,15 +76,7 @@ SDII50 = Σ RR(RR >= 50 mm) / N(RR >= 50 mm)
 Hazard = α1 × Norm(R99p) + α2 × Norm(Prob) + α3 × Norm(SDII50)
 ```
 
-初始权重建议：
-
-```text
-R99p   : 0.4
-Prob   : 0.3
-SDII50 : 0.3
-```
-
-后续可根据专家打分、层次分析法（AHP）、熵权法或敏感性分析调整权重。
+初版曾建议 R99p 0.4 / Prob 0.3 / SDII50 0.3。**该建议已作废。** 当前代码与第 9 节实际权重为等权 1/3（`usri_mapping.py` 默认 `weights=(1/3, 1/3, 1/3)`）。若做敏感性分析，再改权重。
 
 ## 4. Exposure 暴露度指标体系
 
